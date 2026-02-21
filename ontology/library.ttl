@@ -1,0 +1,1360 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14> .
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14> rdf:type :Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> rdf:type :ObjectProperty ;
+                                                                                     
+                                                                                     rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ;
+                                                                                     
+                                                                                     rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> rdf:type :ObjectProperty ;
+                                                                                 
+                                                                                 rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ;
+                                                                                 
+                                                                                 rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> rdf:type :ObjectProperty ;
+                                                                                   
+                                                                                   rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ;
+                                                                                   
+                                                                                   rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasLoan
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasLoan> rdf:type :InverseFunctionalProperty ,
+                                                                                           :ObjectProperty ;
+                                                                                  
+                                                                                  rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ;
+                                                                                  
+                                                                                  rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> ;
+                                                                                  
+                                                                                  :inverseOf <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> rdf:type :ObjectProperty ;
+                                                                                       
+                                                                                       rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ;
+                                                                                       
+                                                                                       rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> rdf:type :FunctionalProperty ,
+                                                                                                      :ObjectProperty ;
+                                                                                             
+                                                                                             rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> ;
+                                                                                             
+                                                                                             rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#MembershipType> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> rdf:type :ObjectProperty ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ;
+                                                                                      
+                                                                                      rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> rdf:type :ObjectProperty ;
+                                                                                    
+                                                                                    rdfs:range <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ;
+                                                                                    
+                                                                                    rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> rdf:type :DatatypeProperty ;
+                                                                                     
+                                                                                     rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ;
+                                                                                     
+                                                                                     rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> rdf:type :DatatypeProperty ;
+                                                                                 
+                                                                                 rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ;
+                                                                                 
+                                                                                 rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> rdf:type :DatatypeProperty ;
+                                                                                  
+                                                                                  rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ;
+                                                                                  
+                                                                                  rdfs:range xsd:dateTime .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> rdf:type :DatatypeProperty ;
+                                                                                
+                                                                                rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> ;
+                                                                                
+                                                                                rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genreName
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genreName> rdf:type :DatatypeProperty ;
+                                                                                    
+                                                                                    rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> ;
+                                                                                    
+                                                                                    rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> rdf:type :DatatypeProperty ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ;
+                                                                                      
+                                                                                      rdfs:range xsd:boolean .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> rdf:type :DatatypeProperty ;
+                                                                                     
+                                                                                     rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ;
+                                                                                     
+                                                                                     rdfs:range xsd:boolean .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> rdf:type :DatatypeProperty ;
+                                                                               
+                                                                               rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ;
+                                                                               
+                                                                               rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> rdf:type :DatatypeProperty ;
+                                                                                   
+                                                                                   rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ;
+                                                                                   
+                                                                                   rdfs:range xsd:dateTime .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#maxBorrowLimit
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#maxBorrowLimit> rdf:type :DatatypeProperty ;
+                                                                                         
+                                                                                         rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#MembershipType> ;
+                                                                                         
+                                                                                         rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> rdf:type :DatatypeProperty ;
+                                                                                   
+                                                                                   rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> ;
+                                                                                   
+                                                                                   rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> rdf:type :DatatypeProperty ;
+                                                                                     
+                                                                                     rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> ;
+                                                                                     
+                                                                                     rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> rdf:type :DatatypeProperty ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ;
+                                                                                      
+                                                                                      rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> rdf:type :DatatypeProperty ;
+                                                                                          
+                                                                                          rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ;
+                                                                                          
+                                                                                          rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisherName
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisherName> rdf:type :DatatypeProperty ;
+                                                                                        
+                                                                                        rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher> ;
+                                                                                        
+                                                                                        rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#returnDate
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#returnDate> rdf:type :DatatypeProperty ;
+                                                                                     
+                                                                                     rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ;
+                                                                                     
+                                                                                     rdfs:range xsd:dateTime .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> rdf:type :DatatypeProperty ;
+                                                                                
+                                                                                rdfs:domain <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ;
+                                                                                
+                                                                                rdfs:range xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> rdf:type :Class ;
+                                                                                 
+                                                                                 rdfs:comment "A person who wrote a book" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> rdf:type :Class ;
+                                                                               
+                                                                               rdfs:subClassOf [ rdf:type :Restriction ;
+                                                                                                 :onProperty [ :inverseOf <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf>
+                                                                                                             ] ;
+                                                                                                 :onClass <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ;
+                                                                                                 :minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                               ] ;
+                                                                               
+                                                                               rdfs:comment " A book title in the library" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> rdf:type :Class ;
+                                                                                   
+                                                                                   rdfs:comment "A physical copy of a book on the shelf" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#FacultyMember
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#FacultyMember> rdf:type :Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> ;
+                                                                                        
+                                                                                        :disjointWith <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> rdf:type :Class ;
+                                                                                
+                                                                                rdfs:comment "A content category" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> rdf:type :Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf [ rdf:type :Restriction ;
+                                                                                                       :onProperty <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> ;
+                                                                                                       :onClass <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> ;
+                                                                                                       :qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                     ] ,
+                                                                                                     [ rdf:type :Restriction ;
+                                                                                                       :onProperty <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> ;
+                                                                                                       :onClass <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ;
+                                                                                                       :qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                     ] ;
+                                                                                     
+                                                                                     rdfs:comment "A single borrowing transaction" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> rdf:type :Class ;
+                                                                                 
+                                                                                 rdfs:comment "A registered library member" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#MembershipType
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#MembershipType> rdf:type :Class ;
+                                                                                         
+                                                                                         rdfs:comment "Defines the borrowing privilages of a member" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#OverDueLoan
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#OverDueLoan> rdf:type :Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher> rdf:type :Class ;
+                                                                                    
+                                                                                    rdfs:comment "A publishing company" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember> rdf:type :Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Member> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#auntor_achebe
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#auntor_achebe> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Chinua Achebe" ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "Nigerian" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_atwood
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_atwood> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "Canadian" ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Margaret Atwood" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_christie
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_christie> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                   :NamedIndividual ;
+                                                                                          
+                                                                                          <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Agatha Christie" ;
+                                                                                          
+                                                                                          <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "British" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_coelho
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_coelho> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Paulo Coelho" ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "Brazilian" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_gaiman
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_gaiman> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "British" ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Neil Gaiman" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_murakami
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_murakami> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                   :NamedIndividual ;
+                                                                                          
+                                                                                          <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "Japanese" ;
+                                                                                          
+                                                                                          <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Haruki Murakami" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_orwell
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_orwell> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "George Orwell" ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "British" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_rowling
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_rowling> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                  :NamedIndividual ;
+                                                                                         
+                                                                                         <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "British" ;
+                                                                                         
+                                                                                         <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "J.K. Rowling" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_silva
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_silva> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                :NamedIndividual ;
+                                                                                       
+                                                                                       <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Ruwan Silva" ;
+                                                                                       
+                                                                                       <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "SriLankan" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_tolkien
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_tolkien> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                  :NamedIndividual ;
+                                                                                         
+                                                                                         <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "J.R.R. Tolkien" ;
+                                                                                         
+                                                                                         <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "British" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_yuval
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_yuval> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Author> ,
+                                                                                                :NamedIndividual ;
+                                                                                       
+                                                                                       <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#nationality> "Israeli" ;
+                                                                                       
+                                                                                       <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#authorName> "Yuval Noah Harari" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book001
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book001> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1949 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "Nineteen Eoghty-Four" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-452-28423-4" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_orwell> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_dystopian> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_penguin> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book002
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book002> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1954 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-618-64015-7" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "The Lord of the Rings" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_tolkien> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fantasy> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book003
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book003> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 2011 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "Sapiens" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-06-231609-7" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_yuval> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_nonfiction> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book004
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book004> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1988 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "The Alchemist" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-06-112241-5" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_coelho> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_nonfiction> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book005
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book005> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 2014 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "The Spftware Craftsman" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-13-405052" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_silva> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_nonfiction> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_oxford> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book006
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book006> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1997 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "Harry Potter and the Philosopher's Stone" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-7475-3269-9" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_rowling> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fantasy> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_bloomsbury> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book007
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book007> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1934 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "Murder on the Orient Express" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-00-711835-2" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_christie> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_mystery> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book008
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book008> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1987 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "Norwegian Wood" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-37-570011-4" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_murakami> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fiction> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_penguin> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book009
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book009> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1985 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "The Handmaid's Tale" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-38-549081-8" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_atwood> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_dystopian> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_penguin> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book010
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book010> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1958 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "Things Fall Apart" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-38-547454-2" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#auntor_achebe> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fiction> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_oxford> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book011
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book011> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1990 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-06-085398-3" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "Good Omens" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_gaiman> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fantasy> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book012
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book012> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Book> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publicationYear> 1939 ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#title> "And Then There Were None" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isbn> "978-0-00-712908-2" ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#writtenBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#author_christie> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#hasGenre> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_mystery> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publishedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy001_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy001_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "false"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-001-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book001> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy001_b
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy001_b> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-001-B" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book001> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy002_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy002_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-002-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book002> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy003_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy003_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-003-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book003> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy004_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy004_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "false"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-004-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book004> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy005_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy005_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-005-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book005> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy006_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy006_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "false"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-006-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book006> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy006_b
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy006_b> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-006-B" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book006> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy007_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy007_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-007-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book007> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy007_b
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy007_b> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "false"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-007-B" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book007> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy008_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy008_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-008-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book008> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy009_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy009_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "false"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-009-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book009> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy009_b
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy009_b> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-009-B" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book009> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy010_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy010_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-010-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book010> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy011_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy011_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-011-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book011> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy012_a
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy012_a> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-012-A" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book012> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy012_b
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy012_b> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#BookCopy> ,
+                                                                                             :NamedIndividual ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isAvailable> "true"^^xsd:boolean ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyId> "COPY-012-B" ;
+                                                                                    
+                                                                                    <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copyOf> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#book012> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_dystopian
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_dystopian> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> ,
+                                                                                                   :NamedIndividual ;
+                                                                                          
+                                                                                          <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genreName> "Dystopian" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fantasy
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fantasy> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genreName> "Fantasy" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fiction
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_fiction> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genreName> "Fiction" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_mystery
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_mystery> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> ,
+                                                                                                 :NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genreName> "Mystery" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_nonfiction
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genre_nonfiction> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Genre> ,
+                                                                                                    :NamedIndividual ;
+                                                                                           
+                                                                                           <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#genreName> "Non-Fiction" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan001
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan001> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#OverDueLoan> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-01-10T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-01-24T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "false"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy001_a> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s001> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan002
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan002> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-01-15T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#returnDate> "2026-02-10T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-02-15T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "true"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy003_a> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f001> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan003
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan003> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-02-14T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-02-28T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "false"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy004_a> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s002> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan004
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan004> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#OverDueLoan> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-01-01T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-01-15T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "false"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy006_a> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s003> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan005
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan005> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#OverDueLoan> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-01-10T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-02-10T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "false"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy009_a> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f003> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan006
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan006> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#OverDueLoan> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-01-01T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-01-15T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "false"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy007_b> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s004> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan007
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan007> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-02-10T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#returnDate> "2026-02-18T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-03-10T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "true"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy012_a> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f004> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan008
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loan008> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#LoanRecord> ,
+                                                                                           :NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#loanDate> "2026-02-05T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#returnDate> "2026-02-17T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#dueDate> "2026-02-19T00:00:00"^^xsd:dateTime ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#isReturned> "true"^^xsd:boolean ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#includesBook> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#copy005_a> ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#borrowedBy> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s005> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f001
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f001> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#FacultyMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "FAC-001" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Dr. Priya Jayasena" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "priya@email.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_faculty> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f002
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f002> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#FacultyMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Prof. Thushari Silva" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "FAC-002" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "thushari@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_faculty> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f003
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f003> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#FacultyMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "nuwan@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Dr. Nuwan Gamage" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "FAC-003" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_faculty> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f004
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_f004> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#FacultyMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "FAC-004" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "iresha@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Prof. Iresha Mendis" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_faculty> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s001
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s001> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "kasun@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "STU-001" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Kasun Perera" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_student> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s002
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s002> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "STU-002" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "nimasha@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Nimesha Fernando" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_student> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s003
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s003> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "STU-003" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "dilshan@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Dilshan Rajapaksha" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_student> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s004
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s004> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Thisara Wickrama" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "STU-004" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "thisara@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_student> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s005
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#member_s005> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#StudentMember> ,
+                                                                                               :NamedIndividual ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#email> "sanduni@uom.lk" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberId> "STU-005" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#memberName> "Sanduni Perera" ;
+                                                                                      
+                                                                                      <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membershipCategory> <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_student> .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_faculty
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_faculty> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#MembershipType> ,
+                                                                                                      :NamedIndividual ;
+                                                                                             
+                                                                                             <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#maxBorrowLimit> 10 .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_student
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#membership_student> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#MembershipType> ,
+                                                                                                      :NamedIndividual ;
+                                                                                             
+                                                                                             <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#maxBorrowLimit> 3 .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_bloomsbury
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_bloomsbury> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher> ,
+                                                                                                        :NamedIndividual ;
+                                                                                               
+                                                                                               <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisherName> "Bloomsbury Publishing" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_harper> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher> ,
+                                                                                                    :NamedIndividual ;
+                                                                                           
+                                                                                           <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisherName> "HarperCollins" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_oxford
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_oxford> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher> ,
+                                                                                                    :NamedIndividual ;
+                                                                                           
+                                                                                           <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisherName> "Oxford University Press" .
+
+
+
+###  http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_penguin
+
+<http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisher_penguin> rdf:type <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#Publisher> ,
+                                                                                                     :NamedIndividual ;
+                                                                                            
+                                                                                            <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#publisherName> "Penguin Books" .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

@@ -16,10 +16,12 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class IRI="#Author"/>
     </Declaration>
@@ -129,10 +131,28 @@
         <DataProperty IRI="#title"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#auntor_achebe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_atwood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_christie"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#author_coelho"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#author_gaiman"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_murakami"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#author_orwell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_rowling"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#author_silva"/>
@@ -159,6 +179,27 @@
         <NamedIndividual IRI="#book005"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#book006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book008"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book009"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book010"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book011"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book012"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#copy001_a"/>
     </Declaration>
     <Declaration>
@@ -177,10 +218,49 @@
         <NamedIndividual IRI="#copy005_a"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#copy006_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy006_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy007_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy007_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy008_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy009_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy009_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy010_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy011_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy012_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy012_b"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#genre_dystopian"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#genre_fantasy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#genre_fiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#genre_mystery"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#genre_nonfiction"/>
@@ -195,10 +275,31 @@
         <NamedIndividual IRI="#loan003"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#loan004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loan005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loan006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loan007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loan008"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#member_f001"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#member_f002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_f003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_f004"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#member_s001"/>
@@ -207,10 +308,22 @@
         <NamedIndividual IRI="#member_s002"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#member_s003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_s004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_s005"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#membership_faculty"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#membership_student"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#publisher_bloomsbury"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#publisher_harper"/>
@@ -262,11 +375,35 @@
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Author"/>
+        <NamedIndividual IRI="#auntor_achebe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_atwood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_christie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
         <NamedIndividual IRI="#author_coelho"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_gaiman"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_murakami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
         <NamedIndividual IRI="#author_orwell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_rowling"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Author"/>
@@ -301,6 +438,34 @@
         <NamedIndividual IRI="#book005"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book012"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#BookCopy"/>
         <NamedIndividual IRI="#copy001_a"/>
     </ClassAssertion>
@@ -325,6 +490,50 @@
         <NamedIndividual IRI="#copy005_a"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy006_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy006_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy007_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy007_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy008_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy009_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy009_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy010_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy011_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy012_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy012_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#genre_dystopian"/>
     </ClassAssertion>
@@ -334,10 +543,22 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#genre_fiction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#genre_mystery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
         <NamedIndividual IRI="#genre_nonfiction"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OverDueLoan"/>
         <NamedIndividual IRI="#loan001"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -349,12 +570,52 @@
         <NamedIndividual IRI="#loan003"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OverDueLoan"/>
+        <NamedIndividual IRI="#loan004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OverDueLoan"/>
+        <NamedIndividual IRI="#loan005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OverDueLoan"/>
+        <NamedIndividual IRI="#loan006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan008"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#FacultyMember"/>
         <NamedIndividual IRI="#member_f001"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FacultyMember"/>
         <NamedIndividual IRI="#member_f002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FacultyMember"/>
+        <NamedIndividual IRI="#member_f003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FacultyMember"/>
+        <NamedIndividual IRI="#member_f004"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#StudentMember"/>
@@ -365,12 +626,28 @@
         <NamedIndividual IRI="#member_s002"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#StudentMember"/>
+        <NamedIndividual IRI="#member_s003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StudentMember"/>
+        <NamedIndividual IRI="#member_s004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StudentMember"/>
+        <NamedIndividual IRI="#member_s005"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#MembershipType"/>
         <NamedIndividual IRI="#membership_faculty"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#MembershipType"/>
         <NamedIndividual IRI="#membership_student"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#publisher_bloomsbury"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Publisher"/>
@@ -460,6 +737,111 @@
         <NamedIndividual IRI="#author_silva"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book006"/>
+        <NamedIndividual IRI="#genre_fantasy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book006"/>
+        <NamedIndividual IRI="#publisher_bloomsbury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book006"/>
+        <NamedIndividual IRI="#author_rowling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book007"/>
+        <NamedIndividual IRI="#genre_mystery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book007"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book007"/>
+        <NamedIndividual IRI="#author_christie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book008"/>
+        <NamedIndividual IRI="#genre_fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book008"/>
+        <NamedIndividual IRI="#publisher_penguin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book008"/>
+        <NamedIndividual IRI="#author_murakami"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book009"/>
+        <NamedIndividual IRI="#genre_dystopian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book009"/>
+        <NamedIndividual IRI="#publisher_penguin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book009"/>
+        <NamedIndividual IRI="#author_atwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book010"/>
+        <NamedIndividual IRI="#genre_fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book010"/>
+        <NamedIndividual IRI="#publisher_oxford"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book010"/>
+        <NamedIndividual IRI="#auntor_achebe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book011"/>
+        <NamedIndividual IRI="#genre_fantasy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book011"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book011"/>
+        <NamedIndividual IRI="#author_gaiman"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book012"/>
+        <NamedIndividual IRI="#genre_mystery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book012"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book012"/>
+        <NamedIndividual IRI="#author_christie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#copyOf"/>
         <NamedIndividual IRI="#copy001_a"/>
         <NamedIndividual IRI="#book001"/>
@@ -490,6 +872,61 @@
         <NamedIndividual IRI="#book005"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy006_a"/>
+        <NamedIndividual IRI="#book006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy006_b"/>
+        <NamedIndividual IRI="#book006"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy007_a"/>
+        <NamedIndividual IRI="#book007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy007_b"/>
+        <NamedIndividual IRI="#book007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy008_a"/>
+        <NamedIndividual IRI="#book008"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy009_a"/>
+        <NamedIndividual IRI="#book009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy009_b"/>
+        <NamedIndividual IRI="#book009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy010_a"/>
+        <NamedIndividual IRI="#book010"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy011_a"/>
+        <NamedIndividual IRI="#book011"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy012_a"/>
+        <NamedIndividual IRI="#book012"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy012_b"/>
+        <NamedIndividual IRI="#book012"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#borrowedBy"/>
         <NamedIndividual IRI="#loan001"/>
         <NamedIndividual IRI="#member_s001"/>
@@ -520,6 +957,56 @@
         <NamedIndividual IRI="#copy004_a"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan004"/>
+        <NamedIndividual IRI="#member_s003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan004"/>
+        <NamedIndividual IRI="#copy006_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan005"/>
+        <NamedIndividual IRI="#member_f003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan005"/>
+        <NamedIndividual IRI="#copy009_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan006"/>
+        <NamedIndividual IRI="#member_s004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan006"/>
+        <NamedIndividual IRI="#copy007_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan007"/>
+        <NamedIndividual IRI="#member_f004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan007"/>
+        <NamedIndividual IRI="#copy012_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan008"/>
+        <NamedIndividual IRI="#member_s005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan008"/>
+        <NamedIndividual IRI="#copy005_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#membershipCategory"/>
         <NamedIndividual IRI="#member_f001"/>
         <NamedIndividual IRI="#membership_faculty"/>
@@ -531,16 +1018,71 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_f003"/>
+        <NamedIndividual IRI="#membership_faculty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_f004"/>
+        <NamedIndividual IRI="#membership_faculty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
         <NamedIndividual IRI="#member_s001"/>
         <NamedIndividual IRI="#membership_student"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#membershipCategory"/>
         <NamedIndividual IRI="#member_s002"/>
+        <NamedIndividual IRI="#membership_student"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_s003"/>
+        <NamedIndividual IRI="#membership_student"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_s004"/>
+        <NamedIndividual IRI="#membership_student"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_s005"/>
         <NamedIndividual IRI="#membership_student"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#auntor_achebe"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Chinua Achebe</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#auntor_achebe"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nigerian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_atwood"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Margaret Atwood</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_atwood"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Canadian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_christie"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Agatha Christie</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_christie"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">British</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
         <NamedIndividual IRI="#author_coelho"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Paulo Coelho</Literal>
     </DataPropertyAssertion>
@@ -551,12 +1093,42 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_gaiman"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Neil Gaiman</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_gaiman"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">British</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_murakami"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Haruki Murakami</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_murakami"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Japanese</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
         <NamedIndividual IRI="#author_orwell"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">George Orwell</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nationality"/>
         <NamedIndividual IRI="#author_orwell"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">British</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_rowling"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">J.K. Rowling</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_rowling"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">British</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -640,14 +1212,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">978-0-06-112241-5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#isbn"/>
-        <NamedIndividual IRI="#book004"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The Alchemist</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#publicationYear"/>
         <NamedIndividual IRI="#book004"/>
         <Literal datatypeIRI="&xsd;integer">1988</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Alchemist</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isbn"/>
@@ -663,6 +1235,111 @@
         <DataProperty IRI="#title"/>
         <NamedIndividual IRI="#book005"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">The Spftware Craftsman</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book006"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-7475-3269-9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book006"/>
+        <Literal datatypeIRI="&xsd;integer">1997</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book006"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Harry Potter and the Philosopher&apos;s Stone</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book007"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-00-711835-2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book007"/>
+        <Literal datatypeIRI="&xsd;integer">1934</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book007"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Murder on the Orient Express</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book008"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-37-570011-4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book008"/>
+        <Literal datatypeIRI="&xsd;integer">1987</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book008"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Norwegian Wood</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book009"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-38-549081-8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book009"/>
+        <Literal datatypeIRI="&xsd;integer">1985</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book009"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Handmaid&apos;s Tale</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book010"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-38-547454-2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book010"/>
+        <Literal datatypeIRI="&xsd;integer">1958</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book010"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Things Fall Apart</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book011"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-06-085398-3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book011"/>
+        <Literal datatypeIRI="&xsd;integer">1990</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book011"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Good Omens</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book012"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-00-712908-2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book012"/>
+        <Literal datatypeIRI="&xsd;integer">1939</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book012"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">And Then There Were None</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#copyId"/>
@@ -702,7 +1379,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#isAvailable"/>
         <NamedIndividual IRI="#copy003_a"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#copyId"/>
@@ -712,7 +1389,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#isAvailable"/>
         <NamedIndividual IRI="#copy004_a"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#copyId"/>
@@ -725,6 +1402,116 @@
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy006_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-006-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy006_a"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy006_b"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-006-B</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy006_b"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy007_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-007-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy007_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy007_b"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-007-B</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy007_b"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy008_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-008-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy008_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy009_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-009-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy009_a"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy009_b"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-009-B</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy009_b"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy010_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-010-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy010_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy011_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-011-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy011_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy012_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-012-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy012_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy012_b"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-012-B</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy012_b"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#genreName"/>
         <NamedIndividual IRI="#genre_dystopian"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Dystopian</Literal>
@@ -733,6 +1520,16 @@
         <DataProperty IRI="#genreName"/>
         <NamedIndividual IRI="#genre_fantasy"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Fantasy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genreName"/>
+        <NamedIndividual IRI="#genre_fiction"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Fiction</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genreName"/>
+        <NamedIndividual IRI="#genre_mystery"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Mystery</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#genreName"/>
@@ -782,12 +1579,97 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#isReturned"/>
         <NamedIndividual IRI="#loan003"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#loanDate"/>
         <NamedIndividual IRI="#loan003"/>
         <Literal datatypeIRI="&xsd;dateTime">2026-02-14T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan004"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-15T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan004"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan004"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan005"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-10T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan005"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan005"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-10T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan006"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-15T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan006"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan006"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan007"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-03-10T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan007"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan007"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-10T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#returnDate"/>
+        <NamedIndividual IRI="#loan007"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-18T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan008"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-19T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan008"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan008"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-05T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#returnDate"/>
+        <NamedIndividual IRI="#loan008"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-17T00:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#email"/>
@@ -821,6 +1703,36 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_f003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">nuwan@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_f003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FAC-003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_f003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dr. Nuwan Gamage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_f004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">iresha@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_f004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FAC-004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_f004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Prof. Iresha Mendis</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
         <NamedIndividual IRI="#member_s001"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">kasun@uom.lk</Literal>
     </DataPropertyAssertion>
@@ -850,6 +1762,51 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Nimesha Fernando</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_s003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">dilshan@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_s003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">STU-003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_s003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dilshan Rajapaksha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_s004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">thisara@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_s004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">STU-004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_s004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Thisara Wickrama</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_s005"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">sanduni@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_s005"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">STU-005</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_s005"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sanduni Perera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#maxBorrowLimit"/>
         <NamedIndividual IRI="#membership_faculty"/>
         <Literal datatypeIRI="&xsd;integer">10</Literal>
@@ -858,6 +1815,11 @@
         <DataProperty IRI="#maxBorrowLimit"/>
         <NamedIndividual IRI="#membership_student"/>
         <Literal datatypeIRI="&xsd;integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publisherName"/>
+        <NamedIndividual IRI="#publisher_bloomsbury"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Bloomsbury Publishing</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#publisherName"/>
@@ -875,8 +1837,8 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Penguin Books</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#borrowedBy"/>
         <ObjectProperty IRI="#hasLoan"/>
+        <ObjectProperty IRI="#borrowedBy"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#membershipCategory"/>
