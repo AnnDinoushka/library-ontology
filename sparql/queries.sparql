@@ -1,0 +1,139 @@
+# ================================================================
+# SPARQL Queries – Library Management Ontology
+# Ontology IRI: http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14
+# Run these in Fuseki at: http://localhost:3030/library/sparql
+# ================================================================
+
+PREFIX lib: <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# ================================================================
+# CQ1: What books are written by a specific author?
+# ================================================================
+SELECT ?title ?isbn ?year
+WHERE {
+  ?author lib:authorName "George Orwell" .
+  ?book lib:writtenBy ?author ;
+        lib:title ?title ;
+        lib:isbn ?isbn ;
+        lib:publicationYear ?year .
+}
+
+# ================================================================
+# CQ2: Which book copies are currently available to borrow?
+# ================================================================
+SELECT ?copyId ?bookTitle
+WHERE {
+  ?copy lib:isAvailable true ;
+        lib:copyId ?copyId ;
+        lib:copyOf ?book .
+  ?book lib:title ?bookTitle .
+}
+ORDER BY ?bookTitle
+
+# ================================================================
+# CQ3: List all active (unreturned) loans with member and book details
+# ================================================================
+SELECT ?memberName ?bookTitle ?loanDate ?dueDate
+WHERE {
+  ?loan lib:borrowedBy ?member ;
+        lib:includesBook ?copy ;
+        lib:loanDate ?loanDate ;
+        lib:dueDate ?dueDate ;
+        lib:isReturned false .
+  ?member lib:memberName ?memberName .
+  ?copy lib:copyOf ?book .
+  ?book lib:title ?bookTitle .
+}
+ORDER BY ?dueDate
+
+# ================================================================
+# CQ4: Which members are student members?
+# ================================================================
+SELECT ?memberName ?memberId ?email
+WHERE {
+  ?member rdf:type lib:StudentMember ;
+          lib:memberName ?memberName ;
+          lib:memberId ?memberId ;
+          lib:email ?email .
+}
+
+# ================================================================
+# CQ5: List all books in a specific genre
+# ================================================================
+SELECT ?title ?authorName ?year
+WHERE {
+  ?genre lib:genreName "Non-Fiction" .
+  ?book lib:hasGenre ?genre ;
+        lib:title ?title ;
+        lib:publicationYear ?year ;
+        lib:writtenBy ?author .
+  ?author lib:authorName ?authorName .
+}
+ORDER BY ?year
+
+# ================================================================
+# CQ6: Which loans are overdue? (classified as OverDueLoan)
+# ================================================================
+SELECT ?memberName ?bookTitle ?dueDate
+WHERE {
+  ?loan rdf:type lib:OverDueLoan ;
+        lib:borrowedBy ?member ;
+        lib:includesBook ?copy ;
+        lib:dueDate ?dueDate .
+  ?member lib:memberName ?memberName .
+  ?copy lib:copyOf ?book .
+  ?book lib:title ?bookTitle .
+}
+
+# ================================================================
+# CQ7: How many books has each author written?
+# ================================================================
+SELECT ?authorName (COUNT(?book) AS ?bookCount)
+WHERE {
+  ?author lib:authorName ?authorName .
+  ?book lib:writtenBy ?author .
+}
+GROUP BY ?authorName
+ORDER BY DESC(?bookCount)
+
+# ================================================================
+# CQ8: What is the full loan history of a specific member?
+# ================================================================
+SELECT ?bookTitle ?loanDate ?dueDate ?returnDate ?isReturned
+WHERE {
+  ?member lib:memberId "STU-001" .
+  ?loan lib:borrowedBy ?member ;
+        lib:includesBook ?copy ;
+        lib:loanDate ?loanDate ;
+        lib:dueDate ?dueDate ;
+        lib:isReturned ?isReturned .
+  OPTIONAL { ?loan lib:returnDate ?returnDate . }
+  ?copy lib:copyOf ?book .
+  ?book lib:title ?bookTitle .
+}
+ORDER BY DESC(?loanDate)
+
+# ================================================================
+# CQ9: List all publishers and the books they have published
+# ================================================================
+SELECT ?publisherName ?bookTitle
+WHERE {
+  ?publisher lib:publisherName ?publisherName .
+  ?book lib:publishedBy ?publisher ;
+        lib:title ?bookTitle .
+}
+ORDER BY ?publisherName
+
+# ================================================================
+# CQ10: What is the maximum borrow limit for faculty members?
+# ================================================================
+SELECT ?memberName ?maxLimit
+WHERE {
+  ?member rdf:type lib:FacultyMember ;
+          lib:memberName ?memberName ;
+          lib:membershipCategory ?mtype .
+  ?mtype lib:maxBorrowLimit ?maxLimit .
+}

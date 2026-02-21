@@ -1,0 +1,1132 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="#Author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Book"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BookCopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FacultyMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LoanRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Member"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MembershipType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OverDueLoan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publisher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StudentMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#borrowedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#copyOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGenre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLoan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesBook"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#membershipCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#publishedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#writtenBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#authorName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#copyId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dueDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#genreName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isAvailable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isReturned"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isbn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#loanDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxBorrowLimit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#memberId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#memberName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nationality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#publicationYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#publisherName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#returnDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_coelho"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_orwell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_silva"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_tolkien"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#author_yuval"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#book005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy001_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy001_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy002_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy003_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy004_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#copy005_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#genre_dystopian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#genre_fantasy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#genre_nonfiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loan001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loan002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loan003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_f001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_f002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_s001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#member_s002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#membership_faculty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#membership_student"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#publisher_oxford"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#publisher_penguin"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#copyOf"/>
+            </ObjectInverseOf>
+            <Class IRI="#BookCopy"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FacultyMember"/>
+        <Class IRI="#Member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoanRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#borrowedBy"/>
+            <Class IRI="#Member"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LoanRecord"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#includesBook"/>
+            <Class IRI="#BookCopy"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OverDueLoan"/>
+        <Class IRI="#LoanRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudentMember"/>
+        <Class IRI="#Member"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#FacultyMember"/>
+        <Class IRI="#StudentMember"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_coelho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_orwell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_silva"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_tolkien"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#author_yuval"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#book005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy001_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy001_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy002_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy003_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy004_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BookCopy"/>
+        <NamedIndividual IRI="#copy005_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#genre_dystopian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#genre_fantasy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#genre_nonfiction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LoanRecord"/>
+        <NamedIndividual IRI="#loan003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FacultyMember"/>
+        <NamedIndividual IRI="#member_f001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FacultyMember"/>
+        <NamedIndividual IRI="#member_f002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StudentMember"/>
+        <NamedIndividual IRI="#member_s001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StudentMember"/>
+        <NamedIndividual IRI="#member_s002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MembershipType"/>
+        <NamedIndividual IRI="#membership_faculty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MembershipType"/>
+        <NamedIndividual IRI="#membership_student"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#publisher_oxford"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#publisher_penguin"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book001"/>
+        <NamedIndividual IRI="#genre_dystopian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book001"/>
+        <NamedIndividual IRI="#publisher_penguin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book001"/>
+        <NamedIndividual IRI="#author_orwell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book002"/>
+        <NamedIndividual IRI="#genre_fantasy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book002"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book002"/>
+        <NamedIndividual IRI="#author_tolkien"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book003"/>
+        <NamedIndividual IRI="#genre_nonfiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book003"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book003"/>
+        <NamedIndividual IRI="#author_yuval"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book004"/>
+        <NamedIndividual IRI="#genre_nonfiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book004"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book004"/>
+        <NamedIndividual IRI="#author_coelho"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#book005"/>
+        <NamedIndividual IRI="#genre_nonfiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#book005"/>
+        <NamedIndividual IRI="#publisher_oxford"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#writtenBy"/>
+        <NamedIndividual IRI="#book005"/>
+        <NamedIndividual IRI="#author_silva"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy001_a"/>
+        <NamedIndividual IRI="#book001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy001_b"/>
+        <NamedIndividual IRI="#book001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy002_a"/>
+        <NamedIndividual IRI="#book002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy003_a"/>
+        <NamedIndividual IRI="#book003"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy004_a"/>
+        <NamedIndividual IRI="#book004"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#copyOf"/>
+        <NamedIndividual IRI="#copy005_a"/>
+        <NamedIndividual IRI="#book005"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan001"/>
+        <NamedIndividual IRI="#member_s001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan001"/>
+        <NamedIndividual IRI="#copy001_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan002"/>
+        <NamedIndividual IRI="#member_f001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan002"/>
+        <NamedIndividual IRI="#copy003_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <NamedIndividual IRI="#loan003"/>
+        <NamedIndividual IRI="#member_s002"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesBook"/>
+        <NamedIndividual IRI="#loan003"/>
+        <NamedIndividual IRI="#copy004_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_f001"/>
+        <NamedIndividual IRI="#membership_faculty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_f002"/>
+        <NamedIndividual IRI="#membership_faculty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_s001"/>
+        <NamedIndividual IRI="#membership_student"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <NamedIndividual IRI="#member_s002"/>
+        <NamedIndividual IRI="#membership_student"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_coelho"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Paulo Coelho</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_coelho"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Brazilian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_orwell"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">George Orwell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_orwell"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">British</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_silva"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ruwan Silva</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_silva"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SriLankan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_tolkien"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">J.R.R. Tolkien</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_tolkien"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">British</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#authorName"/>
+        <NamedIndividual IRI="#author_yuval"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Yuval Noah Harari</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nationality"/>
+        <NamedIndividual IRI="#author_yuval"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Israeli</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-452-28423-4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book001"/>
+        <Literal datatypeIRI="&xsd;integer">1949</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nineteen Eoghty-Four</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-618-64015-7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book002"/>
+        <Literal datatypeIRI="&xsd;integer">1954</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Lord of the Rings</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-06-231609-7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book003"/>
+        <Literal datatypeIRI="&xsd;integer">2011</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book003"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sapiens</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-06-112241-5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book004"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Alchemist</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book004"/>
+        <Literal datatypeIRI="&xsd;integer">1988</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isbn"/>
+        <NamedIndividual IRI="#book005"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">978-0-13-405052</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publicationYear"/>
+        <NamedIndividual IRI="#book005"/>
+        <Literal datatypeIRI="&xsd;integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#title"/>
+        <NamedIndividual IRI="#book005"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Spftware Craftsman</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy001_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-001-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy001_a"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy001_b"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-001-B</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy001_b"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy002_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-002-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy002_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy003_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-003-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy003_a"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy004_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-004-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy004_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copyId"/>
+        <NamedIndividual IRI="#copy005_a"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">COPY-005-A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#copy005_a"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genreName"/>
+        <NamedIndividual IRI="#genre_dystopian"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dystopian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genreName"/>
+        <NamedIndividual IRI="#genre_fantasy"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Fantasy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genreName"/>
+        <NamedIndividual IRI="#genre_nonfiction"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Non-Fiction</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan001"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-24T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan001"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan001"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-10T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan002"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-15T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan002"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan002"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-01-15T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#returnDate"/>
+        <NamedIndividual IRI="#loan002"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-10T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dueDate"/>
+        <NamedIndividual IRI="#loan003"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-28T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isReturned"/>
+        <NamedIndividual IRI="#loan003"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#loanDate"/>
+        <NamedIndividual IRI="#loan003"/>
+        <Literal datatypeIRI="&xsd;dateTime">2026-02-14T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_f001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">priya@email.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_f001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FAC-001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_f001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dr. Priya Jayasena</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_f002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">thushari@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_f002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FAC-002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_f002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Prof. Thushari Silva</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_s001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">kasun@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_s001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">STU-001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_s001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Kasun Perera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#member_s002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">nimasha@uom.lk</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberId"/>
+        <NamedIndividual IRI="#member_s002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">STU-002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#memberName"/>
+        <NamedIndividual IRI="#member_s002"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nimesha Fernando</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxBorrowLimit"/>
+        <NamedIndividual IRI="#membership_faculty"/>
+        <Literal datatypeIRI="&xsd;integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxBorrowLimit"/>
+        <NamedIndividual IRI="#membership_student"/>
+        <Literal datatypeIRI="&xsd;integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publisherName"/>
+        <NamedIndividual IRI="#publisher_harper"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">HarperCollins</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publisherName"/>
+        <NamedIndividual IRI="#publisher_oxford"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Oxford University Press</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#publisherName"/>
+        <NamedIndividual IRI="#publisher_penguin"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Penguin Books</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <ObjectProperty IRI="#hasLoan"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#membershipCategory"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasLoan"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <Class IRI="#LoanRecord"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#copyOf"/>
+        <Class IRI="#BookCopy"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLoan"/>
+        <Class IRI="#Member"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesBook"/>
+        <Class IRI="#LoanRecord"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <Class IRI="#Member"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#publishedBy"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#writtenBy"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#borrowedBy"/>
+        <Class IRI="#Member"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#copyOf"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLoan"/>
+        <Class IRI="#LoanRecord"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesBook"/>
+        <Class IRI="#BookCopy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#membershipCategory"/>
+        <Class IRI="#MembershipType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#publishedBy"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#writtenBy"/>
+        <Class IRI="#Author"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#authorName"/>
+        <Class IRI="#Author"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#copyId"/>
+        <Class IRI="#BookCopy"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dueDate"/>
+        <Class IRI="#LoanRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#Member"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genreName"/>
+        <Class IRI="#Genre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isAvailable"/>
+        <Class IRI="#BookCopy"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isReturned"/>
+        <Class IRI="#LoanRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isbn"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#loanDate"/>
+        <Class IRI="#LoanRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#maxBorrowLimit"/>
+        <Class IRI="#MembershipType"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#memberId"/>
+        <Class IRI="#Member"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#memberName"/>
+        <Class IRI="#Member"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nationality"/>
+        <Class IRI="#Author"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#publicationYear"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#publisherName"/>
+        <Class IRI="#Publisher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#returnDate"/>
+        <Class IRI="#LoanRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#authorName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#copyId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dueDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#genreName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isAvailable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isReturned"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isbn"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#loanDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#maxBorrowLimit"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#memberId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#memberName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nationality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#publicationYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#publisherName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#returnDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Author</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A person who wrote a book</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Book</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> A book title in the library</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BookCopy</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A physical copy of a book on the shelf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Genre</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A content category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LoanRecord</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A single borrowing transaction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Member</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A registered library member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MembershipType</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Defines the borrowing privilages of a member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Publisher</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A publishing company</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
