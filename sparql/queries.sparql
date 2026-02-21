@@ -1,7 +1,6 @@
-# ================================================================
+ ./,m  m,.# ================================================================
 # SPARQL Queries – Library Management Ontology
 # Ontology IRI: http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14
-# Run these in Fuseki at: http://localhost:3030/library/sparql
 # ================================================================
 
 PREFIX lib: <http://www.semanticweb.org/anner/ontologies/2026/1/untitled-ontology-14#>
